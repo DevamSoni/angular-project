@@ -1,0 +1,20 @@
+<!-- *ngfor Directives -->
+<div>
+    <h2>Directives in Angular (*ngfor, *ngIf, ngStyle, ngClass)</h2>
+    <table class="table table-bordered">
+      <tr>
+        <!-- via property binding -->
+        <th [class]="tableClass">Name</th>
+        <th [class]="tableClass">Number</th>
+      </tr>
+      <tr *ngFor="let array of names">
+        <td [class]="tableClass">{{array.name}}</td>
+        <!-- ngStyle & ngClass -->
+        <td
+        [class]="tableClass" 
+        [ngStyle]="{'color' : array.phone === '8888888888' ? 'red' : 'blue'}"
+        [ngClass]="{'text-success' : array.phone === '9408403132'}"
+        >{{array.phone}}</td>
+      </tr>
+    </table>
+  </div>

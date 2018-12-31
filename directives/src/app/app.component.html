@@ -1,0 +1,17 @@
+<!-- string interpolation -->
+<h2>{{title}}</h2>
+
+<!-- two way data binding -->
+<div>
+  <input type="text" placeholder="Enter Username" [(ngModel)]="twoWay" [disabled]="isDisable">
+
+<!-- property binding & Event binding -->
+<input type="submit" [value]="btnText" (click)="btnClick()" class="btn btn-primary">
+
+<p>{{twoWay}}</p>
+</div>
+<!-- call another component using selector -->
+<app-ng-for></app-ng-for>
+
+<!-- call another component using selector -->
+<app-ng-if></app-ng-if>
